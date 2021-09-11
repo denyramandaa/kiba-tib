@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiba ITB</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <section id="app" class="w-full">
+        <!-- start header -->
+        <header class="header fixed top-0 left-0 w-full flex justify-center bg-white z-30">
+            <div class="header__inner flex justify-between lg:justify-start w-full lg:max-w-7xl mx-auto px-4 lg:px-0">
+                <div class="header--logo relative">
+                    <h1><a href="index.html"><img src="assets/images/logo_12kiba.png" alt="Kiba ITB logo"></a></h1>
+                </div>
+                <div class="header__menu hidden lg:flex justify-center items-center lg:ml-8">
+                    <div class="header__menu--list" v-for="(item, key) in sideMenuList" :key="key">
+                        <a :href="item.url">{{ item.label }}</a>
+                    </div>
+                </div>
+                <!-- <div class="header__search hidden lg:flex justify-center items-center">
+                    <form class="relative">
+                        <input type="text" placeholder="Search" class="header__search--input">
+                        <button type="submit" class="absolute header__search--icon"><img src="assets/images/ic-search.png" alt="icon-search"></button>
+                    </form>
+                </div> -->
+                <div class="header__burger flex justify-center items-center cursor-pointer lg:hidden relative">
+                    <img v-if="!sideMenuOpen" src="assets/images/burger.png" alt="burger-icon" @click="sideMenuOpen = true">
+                    <img v-else src="assets/images/close.png" alt="close-icon" @click="sideMenuOpen = false">
+                </div>
+            </div>
+        </header>
+        <div class="header__side fixed flex justify-end min-h-screen lg:hidden w-full z-20" :class="{ show : sideMenuOpen }">
+            <div class="header__side--overlay absolute w-full h-full" :class="{ show : sideMenuOpen }" @click="sideMenuOpen = false"></div>
+            <div class="flex-col w-2/3 bg-white pt-16 relative">
+                <!-- <div class="header__search flex justify-center items-center mb-4">
+                    <form class="relative">
+                        <input type="text" placeholder="Search" class="header__search--input">
+                        <button type="submit" class="absolute header__search--icon"><img src="assets/images/ic-search.png" alt="icon-search"></button>
+                    </form>
+                </div> -->
+                <div class="header__menu flex justify-center items-center flex-col">
+                    <div class="header__menu--list w-2/3 text-center relative" v-for="(item, key) in sideMenuList" :key="key">
+                        <a :href="item.url">{{ item.label }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end header -->
+
+        <!-- start about -->
+        <section class="about w-full lg:max-w-7xl mx-auto pt-16 lg:pt-40 pb-24 lg:pb-40">
+            <div class="relative w-full px-4 lg:px-0 flex items-center justify-center flex-wrap lg:flex-nowrap">
+                <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                    <div class="horizontal-ratio" :style="{ 'background-image': 'url(' + 'https://unsplash.it/700/480?image='+14 + ')' }"></div>
+                </div>
+                <div class="w-full lg:w-1/2 lg:ml-24">
+                    <h2 class="font-heading font-bold text-4xl mb-4 lg:mb-6">Children’s Books Illustration and Design Course</h2>
+                    <p class="font-text font-bold text-lg mb-4 lg:mb-6">Visual Communication, Fine Arts and Design Faculty Institut Teknologi Bandung</p>
+                    <p class="font-text leading-relaxed">In 2009, Children’s Book Design and Illustration Course was initiated under Visual and Communication Design’s program. The course helps students to create children’s picture books from scratch. The course combines theoretical sessions, dummy creations, and discussions with emerging artist and other mentors from the literature industry.  Every year, different themes and media are introduced, bringing diversity and richness in the study portfolio. The course has been collaborated with international organizations such as The Asia Foundation and Room to Read as well as local publishers. Through this collaboration, Children’s Book Design and Illustration Course is aiming to produce high quality children books both locally and globally.</p>
+                </div>
+            </div>
+        </section>
+        <!-- end about -->
+
+        <!-- start footer -->
+        <footer class="flex w-full lg:max-w-7xl mx-auto pb-16 flex-wrap lg:flex-nowrap px-4 lg:px-0">
+            <div class="listing w-full lg:w-1/3 flex flex-wrap items-center mb-8 lg:mr-6">
+                <img class="footer--image" src="assets/images/logo_itb.png" alt="logo-itb">
+                <p class="font-body font-bold mt-4 lg:mt-8">Kelas Ilustrasi Buku Anak (KIBA)<br>Visual Communication, Fine Arts and Design Faculty<br>Bandung Institute of Technology</p>
+            </div>
+            <div class="listing w-full lg:w-1/3 flex flex-wrap items-center mb-8 lg:mr-6">
+                <img class="footer--image" src="assets/images/logo_12kiba.png" alt="logo-itb">
+                <p class="font-body mt-4 lg:mt-8">Gedung Center for Arts, Design, and Language (CADL)<br>Jl. Ganesha No. 10, Bandung<br>(022) 2500935</p>
+            </div>
+            <div class="listing w-full lg:w-1/3 flex flex-col items-start justify-center">
+                <div class="flex items-center justify-center mb-4 lg:mb-8">
+                    <img src="assets/images/icon-email.png" alt="instagram">
+                    <p class="font-body font-bold ml-4">alamatemailxxx@gmail.com</p>
+                </div>
+                <div class="flex items-center justify-center">
+                    <img src="assets/images/icon-ig.png" alt="instagram">
+                    <p class="font-body font-bold ml-4">@kiba_itb</p>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+
+
+    </section>
+
+    <script src="assets/js/vue.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
