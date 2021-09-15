@@ -50,7 +50,8 @@ new Vue({
             'assets/images/partner-2.png'
         ],
         swiperJumbotron: '',
-        swiperWork: ''
+        swiperWork: '',
+        tabWorkDetail: 0
     },
     methods: {
         initSwiperJumbotron() {
