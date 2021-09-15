@@ -49,7 +49,8 @@ new Vue({
             'assets/images/partner-3.png',
             'assets/images/partner-2.png'
         ],
-        swiperJumbotron: ''
+        swiperJumbotron: '',
+        swiperWork: ''
     },
     methods: {
         initSwiperJumbotron() {
@@ -64,6 +65,14 @@ new Vue({
                 navigation: {
                     nextEl: ".swiper--jumbotron--next",
                     prevEl: ".swiper--jumbotron--prev",
+                }
+            });
+        },
+        initSwiperWork() {
+            this.swiperWork = new Swiper(".swiper--work", {
+                navigation: {
+                    nextEl: ".swiper--work--next",
+                    prevEl: ".swiper--work--prev",
                 }
             });
         },
@@ -98,6 +107,7 @@ new Vue({
         this.$nextTick(() => {
             const _self = this
             _self.initSwiperJumbotron()
+            _self.initSwiperWork()
             _self.waitForImages()
             var masonryEvents = ['load', 'resize'];
             masonryEvents.forEach( function(event) {

@@ -17,7 +17,7 @@
     <section id="app" class="w-full">
         <!-- start header -->
         <header class="header fixed top-0 left-0 w-full flex justify-center bg-white z-30">
-            <div class="header__inner flex justify-between lg:justify-start w-full lg:max-w-7xl mx-auto px-4 lg:px-0">
+            <div class="header__inner flex justify-between lg:justify-start w-full lg:max-w-7xl mx-auto px-4">
                 <div class="header--logo relative">
                     <h1><a href="index.html"><img src="assets/images/logo_12kiba.png" alt="Kiba ITB logo"></a></h1>
                 </div>
@@ -58,7 +58,7 @@
 
         <!-- start jumbotron -->
         <section class="jumbotron w-full lg:max-w-7xl mx-auto pt-16 lg:pt-40 flex items-center justify-center">
-            <div class="relative w-full px-6 lg:px-0" @mouseenter="swiperJumbotron.autoplay.stop()" @mouseleave="swiperJumbotron.autoplay.start()">
+            <div class="relative w-full px-6" @mouseenter="swiperJumbotron.autoplay.stop()" @mouseleave="swiperJumbotron.autoplay.start()">
                 <div class="swiper">
                     <div class="swiper__inner swiper--jumbotron">
                         <div class="swiper-wrapper">
@@ -84,7 +84,7 @@
 
         <!-- start portofolio -->
         <section class="portofolio w-full lg:max-w-7xl mx-auto pt-16 flex justify-center items-center flex-wrap">
-            <div class="masonry w-full">
+            <div class="masonry w-full lg:px-6">
                 <div class="masonry-item" v-for="i in dummyFoto">
                     <a href="#"><img :src="i" :alt="i" class="masonry-content"></a>
                 </div>
@@ -97,11 +97,11 @@
 
         <!-- start class -->
         <section class="class w-full lg:max-w-7xl mx-auto">
-            <div class="flex pb-6 justify-between items-center px-4 lg:px-0">
+            <div class="flex pb-6 justify-between items-center px-4">
                 <h3 class="font-heading font-bold">Class</h3>
                 <a href="#">View All</a>
             </div>
-            <div class="flex justify-center items-center flex-wrap lg:flex-nowrap">
+            <div class="flex justify-center items-center flex-wrap lg:flex-nowrap lg:px-4">
                 <div class="listing w-full lg:w-1/4 mb-4 lg:mb-0 lg:mr-4" v-for="i in 4">
                     <a href="#" class="block no-underline hover:underline">
                         <div class="w-full horizontal-ratio bg-cover bg-center" :style="{ 'background-image': 'url(' + 'https://unsplash.it/700/480?image='+i + ')' }"></div>
@@ -117,11 +117,11 @@
 
         <!-- start articles -->
         <section class="class w-full lg:max-w-7xl mx-auto">
-            <div class="flex pb-6 justify-between items-center px-4 lg:px-0">
+            <div class="flex pb-6 justify-between items-center px-4">
                 <h3 class="font-heading font-bold">Articles</h3>
                 <a href="#">View All</a>
             </div>
-            <div class="flex justify-center items-center flex-wrap lg:flex-nowrap px-4 lg:px-0">
+            <div class="flex justify-center items-center flex-wrap lg:flex-nowrap px-4">
                 <div class="listing w-full lg:w-1/3 mb-6 lg:mb-0 lg:mr-4" v-for="i in 3">
                     <a href="#" class="block no-underline">
                         <div class="flex justify-start items-start lg:justify-center lg:items-center">
@@ -140,7 +140,7 @@
         <!-- end articles -->
 
         <!-- start awards and research -->
-        <section class="awards-and-research w-full lg:max-w-7xl mx-auto pt-12 lg:pt-24 flex flex-wrap px-4 lg:px-0">
+        <section class="awards-and-research w-full lg:max-w-7xl mx-auto pt-12 lg:pt-24 flex flex-wrap px-4">
             <div class="awards w-full lg:w-1/2">
                 <h3 class="font-heading font-bold mb-6">Awards</h3>
                 <div class="w-full horizontal-ratio bg-cover bg-center" :style="{ 'background-image': 'url(' + 'https://unsplash.it/700/480?image='+1 + ')' }"></div>
@@ -173,7 +173,7 @@
         <hr class="my-12 lg:my-24">
 
         <!-- start footer -->
-        <footer class="flex w-full lg:max-w-7xl mx-auto pb-16 flex-wrap lg:flex-nowrap px-4 lg:px-0">
+        <footer class="flex w-full lg:max-w-7xl mx-auto pb-16 flex-wrap lg:flex-nowrap px-4">
             <div class="listing w-full lg:w-1/3 flex flex-wrap items-center mb-8 lg:mr-6">
                 <img class="footer--image" src="assets/images/logo_itb.png" alt="logo-itb">
                 <p class="font-body font-bold mt-4 lg:mt-8">Kelas Ilustrasi Buku Anak (KIBA)<br>Visual Communication, Fine Arts and Design Faculty<br>Bandung Institute of Technology</p>

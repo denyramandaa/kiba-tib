@@ -56,23 +56,50 @@
         </div>
         <!-- end header -->
 
-        <!-- start about -->
-        <section class="about w-full lg:max-w-7xl mx-auto pt-16 lg:pt-40 pb-24 lg:pb-40">
-            <div class="relative w-full px-4 flex items-center justify-center flex-wrap lg:flex-nowrap">
-                <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-                    <div class="horizontal-ratio" :style="{ 'background-image': 'url(' + 'https://unsplash.it/700/480?image='+14 + ')' }"></div>
-                </div>
-                <div class="w-full lg:w-1/2 lg:ml-24">
-                    <h2 class="font-heading font-bold text-4xl mb-4 lg:mb-6">Children’s Books Illustration and Design Course</h2>
-                    <p class="font-text font-bold text-lg mb-4 lg:mb-6">Visual Communication, Fine Arts and Design Faculty Institut Teknologi Bandung</p>
-                    <p class="font-text leading-relaxed">In 2009, Children’s Book Design and Illustration Course was initiated under Visual and Communication Design’s program. The course helps students to create children’s picture books from scratch. The course combines theoretical sessions, dummy creations, and discussions with emerging artist and other mentors from the literature industry.  Every year, different themes and media are introduced, bringing diversity and richness in the study portfolio. The course has been collaborated with international organizations such as The Asia Foundation and Room to Read as well as local publishers. Through this collaboration, Children’s Book Design and Illustration Course is aiming to produce high quality children books both locally and globally.</p>
+        
+        <!-- start portofolio -->
+        <section class="heading w-full mt-24 lg:mt-40">
+            <h2 class="font-heading font-bold text-4xl mb-4 lg:mb-6 text-center">Portofolio Directory</h2>
+            <div class="bg-gray-200 w-full">
+                <div class="w-full lg:max-w-7xl mx-auto flex justify-between items-center py-2 px-4 flex-wrap">
+                    <div class="flex w-1/2 lg:w-1/3 justify-start">
+                        <div class="bg-gray-400 text-white py-2 px-6 lg:px-8 rounded-3xl">Year</div>
+                        <div class="py-2 px-6 lg:px-8 rounded-3xl">Project</div>
+                    </div>
+                    <div class="flex w-1/2 lg:w-1/3 justify-end lg:justify-center items-center">
+                        <div class="font-bold mr-2 hidden lg:block">Filter:</div>
+                        <div class="inline-block relative w-24 lg:w-32">
+                            <select class="block appearance-none w-full bg-white px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                              <option>All</option>
+                              <option>Mina</option>
+                              <option>NayeonNayeonNayeon</option>
+                            </select>
+                            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="flex w-1/2 lg:w-1/3"></div>
                 </div>
             </div>
         </section>
-        <!-- end about -->
+        <!-- end portofolio -->
+
+        <!-- start portofolio -->
+        <section class="portofolio w-full lg:max-w-7xl mx-auto pt-16 flex justify-center items-center flex-wrap">
+            <div class="masonry w-full lg:px-6">
+                <div class="masonry-item" v-for="i in dummyFoto">
+                    <a href="#"><img :src="i" :alt="i" class="masonry-content"></a>
+                </div>
+            </div>
+            <button class="font-text text-lg bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow mt-16">
+                See More
+            </button>
+        </section>
+        <!-- end portofolio -->
 
         <!-- start footer -->
-        <footer class="flex w-full lg:max-w-7xl mx-auto pb-16 flex-wrap lg:flex-nowrap px-4">
+        <footer class="flex w-full lg:max-w-7xl mx-auto pb-16 flex-wrap lg:flex-nowrap px-4 mt-24">
             <div class="listing w-full lg:w-1/3 flex flex-wrap items-center mb-8 lg:mr-6">
                 <img class="footer--image" src="assets/images/logo_itb.png" alt="logo-itb">
                 <p class="font-body font-bold mt-4 lg:mt-8">Kelas Ilustrasi Buku Anak (KIBA)<br>Visual Communication, Fine Arts and Design Faculty<br>Bandung Institute of Technology</p>
