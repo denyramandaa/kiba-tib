@@ -26,7 +26,9 @@ a {
     font-family: 'Lato', sans-serif;
 }
 
-
+footer {
+    box-shadow: 0px -3px 4px rgb(0 0 0 / 15%);
+}
 .header {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
@@ -156,6 +158,9 @@ a {
 .listing:last-child {
     margin: 0;
 }
+.listing-card-box-shadow {
+    box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+}
 .partnership-img {
     width: auto;
     height: 85px;
@@ -164,6 +169,30 @@ a {
     height: 74px;
     width: auto;
 }
+.hide {
+    padding: 0;
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* content start here */
+.content p, .content h2, .content h3, .content h4 {
+    margin-bottom: 32px;
+}
+.content p {
+    font-size: 18px;
+    line-height: 28px;
+}
+.content img, .content figure {
+    width: 100%;
+    margin-bottom: 32px;
+}
+.content iframe {
+    margin: 0;
+    width: 100%;
+}
+
 /* desktop */
 @media screen and (min-width: 768px) {
     .swiper-button-next, .swiper-rtl .swiper-button-prev {

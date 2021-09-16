@@ -54,9 +54,9 @@ new Vue({
         tabWorkDetail: 0
     },
     watch: {
-        tabWorkDetail() {
-            if(this.tabWorkDetail === 0) this.initSwiperWork(), console.log('ggg')
-        }
+        // tabWorkDetail() {
+        //     this.tabWorkDetail === 0 ? this.initSwiperWork() : this.swiperWork = ''
+        // }
     },
     methods: {
         initSwiperJumbotron() {
