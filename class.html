@@ -64,19 +64,21 @@
         <!-- end heading -->
 
         <!-- start work -->
-        <section class="work w-full lg:max-w-7xl mx-auto pt-16 flex justify-center items-center flex-wrap relative px-4 pb-24 lg:pb-40">
-            <div class="w:full lg:w-1/4 pb-6 lg:pr-6 listing-card" v-for="(item, index) in 8">
-                <div class="listing-card-box-shadow">
-                    <a href="#" class="no-underline">
-                        <div class="w-full horizontal-ratio" :style="{ 'background-image': 'url(' + 'https://unsplash.it/700/480?image='+item + ')' }"></div>
-                        <div class="bg-white p-4 text-center">
-                            <h4 class="font-text font-bold">Judul Blog 90 Huruf Lorem Ipsum Dolor sit Amet Consectetur Adipiscing Elit Maecenas Semper</h4>
-                            <p class="mt-2">29 Mar 2021</p>
-                        </div>
-                    </a>
+        <section class="work w-full lg:max-w-7xl mx-auto pt-12 flex justify-center items-center flex-wrap relative px-4 pb-24 lg:pb-40">
+            <div class="w-full flex justify-center items-center flex-wrap">
+                <div class="w:full lg:w-1/4 pb-6 lg:pr-6 listing-card" v-for="(item, index) in 8">
+                    <div class="listing-card-box-shadow">
+                        <a href="detail.html" class="no-underline">
+                            <div class="w-full horizontal-ratio" :style="{ 'background-image': 'url(' + 'https://unsplash.it/700/480?image='+item + ')' }"></div>
+                            <div class="bg-white p-4 text-center">
+                                <h4 class="font-text font-bold">Judul Blog 90 Huruf Lorem Ipsum Dolor sit Amet Consectetur Adipiscing Elit Maecenas Semper</h4>
+                                <p class="mt-2">29 Mar 2021</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="flex mt-12 lg:mt-16">
+            <div class="flex mt-12 lg:mt-16 items-center justify-center">
                 <span class="px-4 py-2 bg-gray-200 mx-1 font-bold cursor-pointer"><</span>
                 <span class="px-4 py-2 bg-gray-200 mx-1 font-bold cursor-pointer" v-for="(item, key) in 3">{{ item }}</span>
                 <span class="px-4 py-2 bg-gray-200 mx-1 font-bold cursor-pointer">></span>

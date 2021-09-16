@@ -5,31 +5,31 @@ new Vue({
         sideMenuList: [
             {
                 'label': 'ABOUT',
-                'url' : '#'
+                'url' : 'about.html'
             },
             {
                 'label': 'PORTOFOLIO',
-                'url' : '#'
+                'url' : 'item-directory.html'
             },
             {
                 'label': 'CLASS',
-                'url' : '#'
+                'url' : 'class.html'
             },
             {
                 'label': 'ARTICLES',
-                'url' : '#'
+                'url' : 'articles.html'
             },
             {
                 'label': 'RESEARCH',
-                'url' : '#'
+                'url' : 'research.html'
             },
             {
                 'label': 'AWARDS',
-                'url' : '#'
+                'url' : 'awards.html'
             },
             {
                 'label': 'SHOP',
-                'url' : '#'
+                'url' : 'shop.html'
             }
         ],
         dummyFoto: [
@@ -52,11 +52,6 @@ new Vue({
         swiperJumbotron: '',
         swiperWork: '',
         tabWorkDetail: 0
-    },
-    watch: {
-        // tabWorkDetail() {
-        //     this.tabWorkDetail === 0 ? this.initSwiperWork() : this.swiperWork = ''
-        // }
     },
     methods: {
         initSwiperJumbotron() {
