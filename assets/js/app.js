@@ -53,6 +53,11 @@ new Vue({
         swiperWork: '',
         tabWorkDetail: 0
     },
+    watch: {
+        tabWorkDetail() {
+            if(this.tabWorkDetail === 0) this.initSwiperWork(), console.log('ggg')
+        }
+    },
     methods: {
         initSwiperJumbotron() {
             this.swiperJumbotron = new Swiper(".swiper--jumbotron", {
@@ -71,6 +76,8 @@ new Vue({
         },
         initSwiperWork() {
             this.swiperWork = new Swiper(".swiper--work", {
+                observer: true,
+                observeParents: true,
                 navigation: {
                     nextEl: ".swiper--work--next",
                     prevEl: ".swiper--work--prev",
