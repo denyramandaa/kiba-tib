@@ -196,10 +196,10 @@ footer {
 /* desktop */
 @media screen and (min-width: 768px) {
     .swiper-button-next, .swiper-rtl .swiper-button-prev {
-        right: -25px;
+        right: -15px;
     }
     .swiper-button-prev, .swiper-rtl .swiper-button-next {
-        left: -25px;
+        left: -15px;
     }
     .partnership-img {
         height: 100px;

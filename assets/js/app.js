@@ -4,31 +4,31 @@ new Vue({
         sideMenuOpen: false,
         sideMenuList: [
             {
-                'label': 'ABOUT',
+                'label': 'About',
                 'url' : 'about.html'
             },
             {
-                'label': 'PORTOFOLIO',
+                'label': 'Portofolio',
                 'url' : 'item-directory.html'
             },
             {
-                'label': 'CLASS',
+                'label': 'Class',
                 'url' : 'class.html'
             },
             {
-                'label': 'ARTICLES',
+                'label': 'Articles',
                 'url' : 'articles.html'
             },
             {
-                'label': 'RESEARCH',
+                'label': 'Research',
                 'url' : 'research.html'
             },
             {
-                'label': 'AWARDS',
+                'label': 'Awards',
                 'url' : 'awards.html'
             },
             {
-                'label': 'SHOP',
+                'label': 'Shop',
                 'url' : 'shop.html'
             }
         ],
